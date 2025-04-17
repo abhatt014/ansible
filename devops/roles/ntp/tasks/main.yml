@@ -1,0 +1,12 @@
+# roles/ntp/tasks/main.yml
+---
+- name: Ensure NTP package is installed.
+  package: # Use 'package' module for broader compatibility
+    name: "{{ ntp_package_name }}" # Use a variable
+    state: present
+
+- name: Ensure NTP service is running and enabled.
+  service:
+    name: "{{ ntp_service_name }}" # Use a variable
+    state: started
+    enabled: yes
