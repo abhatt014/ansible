@@ -1,0 +1,4 @@
+# roles/ntp/defaults/main.yml
+---
+ntp_package_name: ntp  # Default for many Linux distros
+ntp_service_name: ntpd # Common service name (might vary, e.g., ntp for Debian/Ubuntu)
